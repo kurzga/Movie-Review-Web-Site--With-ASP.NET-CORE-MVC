@@ -1,0 +1,490 @@
+﻿@{
+    Layout = "~/Views/Shared/Layout2.cshtml";
+}
+<!-- nav -->
+<div class="movies_nav">
+    <div class="container">
+        <nav class="navbar navbar-default">
+            <div class="navbar-header navbar-left">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+                <nav>
+                    <ul class="nav navbar-nav">
+                        <li><a href="/Home/Index">Ana Sayfa</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Film Türleri<b class="caret"></b></a>
+                            <ul class="dropdown-menu multi-column columns-3">
+                                <li>
+                                    <div class="col-sm-4">
+                                        <ul class="multi-column-dropdown">
+                                            <li>@Html.ActionLink("Komedi", "Comedy", "Genre")</li>
+                                            <li>@Html.ActionLink("Aile", "Genres", "Genre")</li>
+                                            <li>@Html.ActionLink("Korku", "Horror", "Genre")</li>
+                                        </ul>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>@Html.ActionLink("Film Serileri", "Series", "Series")</li>
+                        <li class="active">@Html.ActionLink("Haberler", "News", "News")</li>
+                        <li>@Html.ActionLink("A - z liste", "List", "List")</li>
+                    </ul>
+                </nav>
+            </div>
+        </nav>
+    </div>
+</div>
+<!-- //nav -->
+<!-- faq-banner -->
+<div class="faq">
+    <div class="container">
+        <div class="agileits-news-top">
+            <ol class="breadcrumb">
+                <li><a href=""/Home/Index">Ana Sayfa</a></li>
+                <li><a href="/News/News">Haberler</a></li>
+                <li class="active">TekHaber</li>
+            </ol>
+        </div>
+        <div class="agileinfo-news-top-grids">
+            <div class="col-md-8 wthree-top-news-left">
+                <div class="wthree-news-left">
+                    <div class="wthree-news-left-img">
+                        <img src="~/Film/images/7.jpg" alt="" />
+                        <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tristique mattis fermentum. Etiam semper aliquet massa, id tempus massa mattis eget.</h4>
+                        <div class="s-author">
+                            <p>Admin<a href="#"><i class="fa fa-user" aria-hidden="true"></i>tarafından paylaşıldı</a> &nbsp;&nbsp; <i class="fa fa-calendar" aria-hidden="true"></i> 25 Aralık, 2023 &nbsp;&nbsp; <a href="#"><i class="fa fa-comments" aria-hidden="true"></i> Yorumlar (10)</a></p>
+                        </div>
+                        <div id="fb-root"></div>
+                        <div class="news-shar-buttons">
+                            <ul>
+                               
+                                <li>
+                                    <script>
+                                        (function (d, s, id) {
+                                            var js, fjs = d.getElementsByTagName(s)[0];
+                                            if (d.getElementById(id)) return;
+                                            js = d.createElement(s); js.id = id;
+                                            js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.7";
+                                            fjs.parentNode.insertBefore(js, fjs);
+                                        }(document, 'script', 'facebook-jssdk'));
+                                    </script>
+                                    <div class="fb-share-button" data-href="https://www.facebook.com/w3layouts" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.facebook.com%2Fw3layouts&amp;src=sdkpreparse">Share</a></div>
+                                </li>
+                                <li class="news-twitter">
+                                    <a href="https://twitter.com/w3layouts" class="twitter-follow-button" data-show-count="false">Takip Et</a>
+                                    <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+                                </li>
+                                <li>
+                                    <a href="https://twitter.com/intent/tweet?screen_name=w3layouts" class="twitter-mention-button" data-show-count="false">Paylaş</a>
+                                    <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+                                </li>
+                                <li>
+                                    <!-- Place this tag where you want the +1 button to render. -->
+                                    <div class="g-plusone" data-size="medium"></div>
+                                    <!-- Place this tag after the last +1 button tag. -->
+                                    <script type="text/javascript">
+                                        (function () {
+                                            var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                                            po.src = 'https://apis.google.com/js/platform.js';
+                                            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+                                        })();
+                                    </script>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="w3-agile-news-text">
+                            <p>
+                                Pellentesque vel urna accumsan, dictum sapien vitae, condimentum tellus. Nulla fermentum enim vitae commodo dapibus. Vivamus diam ligula, accumsan non malesuada et, interdum malesuada turpis. Donec posuere eros eget velit iaculis consequat. Vestibulum ante felis, congue a sapien pharetra, sodales congue magna. Curabitur id varius urna. Morbi finibus, velit sagittis fermentum venenatis, erat risus elementum nibh, at commodo lorem orci sed nulla. Pellentesque eu velit pulvinar, scelerisque lacus ut, semper dolor.
+                                <span>Donec semper, nibh et lacinia sollicitudin, nibh dui pellentesque elit, eu placerat leo felis nec nunc. Sed bibendum pretium metus eget euismod. Mauris id lacus lacus. Praesent faucibus nunc eget turpis tristique molestie. Duis dui diam, tristique eu gravida ut, congue eget felis. Proin sapien ligula, volutpat ut ultrices sit amet, dignissim quis urna. </span>
+                                Cras fermentum eu dolor in porttitor. Praesent sagittis sollicitudin scelerisque. Vivamus ac erat in ex consectetur imperdiet vel eget sapien. Duis viverra nisi id leo varius, vitae eleifend turpis vulputate. Mauris eget sagittis augue, ut efficitur mauris. Aenean risus nisi, faucibus eget condimentum at, porttitor vel felis. Aliquam eu augue ut tortor gravida iaculis in in orci. Quisque vehicula consectetur sagittis.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="wthree-related-news-left">
+                    <h4>İlgili Haberler</h4>
+                    <div class="wthree-news-top-left">
+                        <div class="col-md-6 w3-agileits-news-left">
+                            <div class="col-sm-5 wthree-news-img">
+                                <a href="/News/News_single"><img src="~/Film/images/m1.jpg" alt="" /></a>
+                            </div>
+                            <div class="col-sm-7 wthree-news-info">
+                                <h5><a href="/News/News_single">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h5>
+                                <p>Sed tristique mattis fermentum. Etiam semper aliquet massa, id tempus massa mattis eget.</p>
+                                <ul>
+                                    <li><i class="fa fa-clock-o" aria-hidden="true"></i> 24/09/2016</li>
+                                    <li><i class="fa fa-eye" aria-hidden="true"></i> 2642</li>
+                                </ul>
+                            </div>
+                            <div class="clearfix"> </div>
+                        </div>
+                        <div class="col-md-6 w3-agileits-news-left">
+                            <div class="col-sm-5 wthree-news-img">
+                                <a href="/News/News_single"><img src="~/Film/images/m2.jpg" alt="" /></a>
+                            </div>
+                            <div class="col-sm-7 wthree-news-info">
+                                <h5><a href="/News/News_single">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h5>
+                                <p>Sed tristique mattis fermentum. Etiam semper aliquet massa, id tempus massa mattis eget.</p>
+                                <ul>
+                                    <li><i class="fa fa-clock-o" aria-hidden="true"></i> 24/09/2016</li>
+                                    <li><i class="fa fa-eye" aria-hidden="true"></i> 2642</li>
+                                </ul>
+                            </div>
+                            <div class="clearfix"> </div>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                </div>
+                <!-- agile-comments -->
+                <div class="agile-news-comments">
+                    <div class="agile-news-comments-info">
+                        <h4>Yorumlar</h4>
+                        <div class="fb-comments" data-href="https://w3layouts.com/" data-width="100%" data-numposts="5"></div>
+                    </div>
+                </div>
+                <!-- //agile-comments -->
+                <div class="news-related">
+
+                </div>
+            </div>
+            <div class="col-md-4 wthree-news-right">
+                <!-- news-right-top -->
+                <div class="news-right-top">
+                    <div class="wthree-news-right-heading">
+                        <h3>Güncellenmiş Haberler</h3>
+                    </div>
+                    <div class="wthree-news-right-top">
+                        <div class="news-grids-bottom">
+                            <!-- date -->
+                            <div id="design" class="date">
+                                <div id="cycler">
+                                    <div class="date-text">
+                                        <a href="/News/News_single">August 15,2016</a>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                    </div>
+                                    <div class="date-text">
+                                        <a href="/News/News_single">July 08,2016 <span class="blinking"><img src="~/Film/images/new.png" alt="" /></span></a>
+                                        <p>Nullam non turpis sit amet metus tristique egestas et et orci.</p>
+                                    </div>
+                                    <div class="date-text">
+                                        <a href="/News/News_single">February 15,2016</a>
+                                        <p>Duis venenatis ac ipsum vel ultricies in placerat quam</p>
+                                    </div>
+                                    <div class="date-text">
+                                        <a href="/News/News_single">January 15,2016 <span class="blinking"><img src="~/Film/images/new.png" alt="" /></span></a>
+                                        <p>Pellentesque ullamcorper fringilla ipsum, ornare dapibus velit volutpat sit amet.</p>
+                                    </div>
+                                    <div class="date-text">
+                                        <a href="/News/News_single">September 24,2016</a>
+                                        <p>In lobortis ipsum mi, ac imperdiet elit pellentesque at.</p>
+                                    </div>
+                                    <div class="date-text">
+                                        <a href="/News/News_single">August 15,2016</a>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                    </div>
+                                    <div class="date-text">
+                                        <a href="/News/News_single">July 08,2016 <span class="blinking"><img src="~/Film/images/new.png" alt="" /></span></a>
+                                        <p>Nullam non turpis sit amet metus tristique egestas et et orci.</p>
+                                    </div>
+                                    <div class="date-text">
+                                        <a href="/News/News_single">February 15,2016</a>
+                                        <p>Duis venenatis ac ipsum vel ultricies in placerat quam</p>
+                                    </div>
+                                    <div class="date-text">
+                                        <a href="/News/News_single">January 15,2016 <span class="blinking"><img src="~/Film/images/new.png" alt="" /></span></a>
+                                        <p>Pellentesque ullamcorper fringilla ipsum, ornare dapibus velit volutpat sit amet.</p>
+                                    </div>
+                                    <div class="date-text">
+                                        <a href="/News/News_single">September 24,2016</a>
+                                        <p>In lobortis ipsum mi, ac imperdiet elit pellentesque at.</p>
+                                    </div>
+                                </div>
+                                <script>
+                                    function blinker() {
+                                        $('.blinking').fadeOut(500);
+                                        $('.blinking').fadeIn(500);
+                                    }
+                                    setInterval(blinker, 1000);
+                                </script>
+                                <script>
+                                    function cycle($item, $cycler) {
+                                        setTimeout(cycle, 2000, $item.next(), $cycler);
+
+                                        $item.slideUp(1000, function () {
+                                            $item.appendTo($cycler).show();
+                                        });
+                                    }
+                                    cycle($('#cycler div:first'), $('#cycler'));
+                                </script>
+                            </div>
+                            <!-- //date -->
+                        </div>
+                    </div>
+                </div>
+                <!-- //news-right-top -->
+                <!-- news-right-bottom -->
+                <div class="news-right-bottom">
+                    <div class="wthree-news-right-heading">
+                        <h3>Önemli Haberler</h3>
+                    </div>
+                    <div class="news-right-bottom-bg">
+                        <div class="news-grids-bottom">
+                            <div class="top-news-grid">
+                                <div class="top-news-grid-heading">
+                                    <a href="/News/News_single">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean rutrum ac nulla</a>
+                                </div>
+                                <div class="w3ls-news-t-grid top-t-grid">
+                                    <ul>
+                                        <li><a href="#"><i class="fa fa-clock-o"></i> 1h</a></li>
+                                        <li><a href="#"><i class="fa fa-user"></i> Vivamus nibh</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="top-news-grid">
+                                <div class="top-news-grid-heading">
+                                    <a href="/News/News_single">Duis orci enim, rutrum vel sodales ut, tincidunt nec turpis.</a>
+                                </div>
+                                <div class="w3ls-news-t-grid top-t-grid">
+                                    <ul>
+                                        <li><a href="#"><i class="fa fa-clock-o"></i> 3h</a></li>
+                                        <li><a href="#"><i class="fa fa-user"></i> Cras pretium</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="top-news-grid">
+                                <div class="top-news-grid-heading">
+                                    <a href="/News/News_single">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean rutrum ac nulla</a>
+                                </div>
+                                <div class="w3ls-news-t-grid top-t-grid">
+                                    <ul>
+                                        <li><a href="#"><i class="fa fa-clock-o"></i> 1h</a></li>
+                                        <li><a href="#"><i class="fa fa-user"></i> Vivamus nibh</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="top-news-grid">
+                                <div class="top-news-grid-heading">
+                                    <a href="/News/News_single">Duis orci enim, rutrum vel sodales ut, tincidunt nec turpis.</a>
+                                </div>
+                                <div class="w3ls-news-t-grid top-t-grid">
+                                    <ul>
+                                        <li><a href="#"><i class="fa fa-clock-o"></i> 3h</a></li>
+                                        <li><a href="#"><i class="fa fa-user"></i> Cras pretium</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //news-right-bottom -->
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+    <div class="w3l-latest-movies-grids">
+        <h4 class="latest-text w3_latest_text">Son Çıkan Filmler</h4>
+        <div class="container">
+            <!-- /latest-movies -->
+            <div class="browse-inner">
+                <div class="col-md-2 w3l-movie-gride-agile">
+                    <a href="/Home/Single" class="hvr-shutter-out-horizontal">
+                        <img src="~/Film/images/m7.jpg" title="album-name" alt=" " />
+                        <div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
+                    </a>
+                    <div class="mid-1">
+                        <div class="w3l-movie-text">
+                            <h6><a href="/Home/Single">Light B/t Oceans</a></h6>
+                        </div>
+                        <div class="mid-2">
+
+                            <p>2016</p>
+                            <div class="block-stars">
+                                <ul class="w3l-ratings">
+                                    <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
+
+
+                                </ul>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+
+                    </div>
+                    <div class="ribben">
+                        <p>NEW</p>
+                    </div>
+                </div>
+                <div class="col-md-2 w3l-movie-gride-agile">
+                    <a href="/Home/Single" class="hvr-shutter-out-horizontal">
+                        <img src="~/Film/images/m8.jpg" title="album-name" alt=" " />
+                        <div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
+                    </a>
+                    <div class="mid-1">
+                        <div class="w3l-movie-text">
+                            <h6><a href="/Home/Single">The BFG</a></h6>
+                        </div>
+                        <div class="mid-2">
+
+                            <p>2016</p>
+                            <div class="block-stars">
+                                <ul class="w3l-ratings">
+                                    <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
+
+
+                                </ul>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+
+                    </div>
+                    <div class="ribben">
+                        <p>NEW</p>
+                    </div>
+                </div>
+                <div class="col-md-2 w3l-movie-gride-agile">
+                    <a href="/Home/Single" class="hvr-shutter-out-horizontal">
+                        <img src="~/Film/images/m9.jpg" title="album-name" alt=" " />
+                        <div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
+                    </a>
+                    <div class="mid-1">
+                        <div class="w3l-movie-text">
+                            <h6><a href="/Home/Single">Central Intelligence</a></h6>
+                        </div>
+                        <div class="mid-2">
+
+                            <p>2016</p>
+                            <div class="block-stars">
+                                <ul class="w3l-ratings">
+                                    <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
+
+
+                                </ul>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+
+                    </div>
+                    <div class="ribben">
+                        <p>NEW</p>
+                    </div>
+                </div>
+                <div class="col-md-2 w3l-movie-gride-agile">
+                    <a href="/Home/Single" class="hvr-shutter-out-horizontal">
+                        <img src="~/Film/images/m10.jpg" title="album-name" alt=" " />
+                        <div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
+                    </a>
+                    <div class="mid-1">
+                        <div class="w3l-movie-text">
+                            <h6><a href="/Home/Single">Don't Think Twice</a></h6>
+                        </div>
+                        <div class="mid-2">
+
+                            <p>2016</p>
+                            <div class="block-stars">
+                                <ul class="w3l-ratings">
+                                    <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
+
+
+                                </ul>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+
+                    </div>
+                    <div class="ribben">
+                        <p>NEW</p>
+                    </div>
+                </div>
+                <div class="col-md-2 w3l-movie-gride-agile">
+                    <a href="/Home/Single" class="hvr-shutter-out-horizontal">
+                        <img src="~/Film/images/m11.jpg" title="album-name" alt=" " />
+                        <div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
+                    </a>
+                    <div class="mid-1">
+                        <div class="w3l-movie-text">
+                            <h6><a href="/Home/Single">X-Men</a></h6>
+                        </div>
+                        <div class="mid-2">
+
+                            <p>2016</p>
+                            <div class="block-stars">
+                                <ul class="w3l-ratings">
+                                    <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
+
+
+                                </ul>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+
+                    </div>
+                    <div class="ribben">
+                        <p>NEW</p>
+                    </div>
+                </div>
+                <div class="col-md-2 w3l-movie-gride-agile">
+                    <a href="/Home/Single" class="hvr-shutter-out-horizontal">
+                        <img src="~/Film/images/m12.jpg" title="album-name" alt=" " />
+                        <div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
+                    </a>
+                    <div class="mid-1">
+                        <div class="w3l-movie-text">
+                            <h6><a href="/Home/Single">Greater</a></h6>
+                        </div>
+                        <div class="mid-2">
+
+                            <p>2016</p>
+                            <div class="block-stars">
+                                <ul class="w3l-ratings">
+                                    <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
+
+
+                                </ul>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+
+                    </div>
+                    <div class="ribben">
+                        <p>NEW</p>
+                    </div>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+            <!-- //latest-movies -->
+
+        </div>
+    </div>
+</div>
+<!-- //faq-banner -->

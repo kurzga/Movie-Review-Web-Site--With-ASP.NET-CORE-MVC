@@ -1,0 +1,276 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>One Movies an Entertainment Category Flat Bootstrap Responsive Website Template | Home :: w3layouts</title>
+    <!-- for-mobile-apps -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="One Movies Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script type="application/x-javascript">
+        addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+               function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- //for-mobile-apps -->
+    <link href="~/Film/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="~/Film/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="stylesheet" href="~/Film/css/contactstyle.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="~/Film/css/faqstyle.css" type="text/css" media="all" />
+    <link href="~/Film/css/single.css" rel='stylesheet' type='text/css' />
+    <link href="~/Film/css/medile.css" rel='stylesheet' type='text/css' />
+    <!-- banner-slider -->
+    <link href="~/Film/css/jquery.slidey.min.css" rel="stylesheet">
+    <!-- //banner-slider -->
+    <!-- pop-up -->
+    <link href="~/Film/css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- //pop-up -->
+    <!-- font-awesome icons -->
+    <link rel="stylesheet" href="~/Film/css/font-awesome.min.css" />
+    <!-- //font-awesome icons -->
+    <!-- js -->
+    <script type="text/javascript" src="~/Film/js/jquery-2.1.4.min.js"></script>
+    <!-- //js -->
+    <!-- banner-bottom-plugin -->
+    <link href="~/Film/css/owl.carousel.css" rel="stylesheet" type="text/css" media="all">
+    <script src="~/Film/js/owl.carousel.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#owl-demo").owlCarousel({
+
+                autoPlay: 3000, //Set AutoPlay to 3 seconds
+
+                items: 5,
+                itemsDesktop: [640, 4],
+                itemsDesktopSmall: [414, 3]
+
+            });
+
+        });
+    </script>
+    <!-- //banner-bottom-plugin -->
+    <link href='//fonts.googleapis.com/css?family=Roboto+Condensed:400,700italic,700,400italic,300italic,300' rel='stylesheet' type='text/css'>
+    <!-- start-smoth-scrolling -->
+    <script type="text/javascript" src="~/Film/js/move-top.js"></script>
+    <script type="text/javascript" src="~/Film/js/easing.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+            $(".scroll").click(function (event) {
+                event.preventDefault();
+                $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
+            });
+        });
+    </script>
+    <!-- start-smoth-scrolling -->
+</head>
+
+<body>
+    <!-- header -->
+    <div class="header">
+        <div class="container">
+            <div class="w3layouts_logo">
+                <a href="/Home/Index"><h1>One<span>Movies</span></h1></a>
+                <h1>One<span>Movies</span></h1>
+            </div>
+            <div class="w3_search">
+                <form action="#" method="post">
+                    <input type="text" name="Search" placeholder="Ara" required="">
+                    <input type="submit" value="Git">
+                </form>
+            </div>
+            <div class="w3l_sign_in_register">
+                <ul>
+                    <li><a href="#" data-toggle="modal" data-target="#myModal">Giriş Yap</a></li>
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+    <!-- //header -->
+    <!-- bootstrap-pop-up -->
+    <div class="modal video-modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    Giriş Yap & Kayıt Ol
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <section>
+                    <div class="modal-body">
+                        <div class="w3_login_module">
+                            <div class="module form-module">
+                                <div class="toggle">
+                                    <i class="fa fa-times fa-pencil"></i>
+                                    <div class="tooltip">Bana Tıkla</div>
+                                </div>
+                                <div class="form">
+                                    <h3>Hesabına Giriş Yap</h3>
+                                    <form onsubmit="return login()">
+                                        <input type="text" name="Username" id="username" placeholder="Kullanıcı Adı" required="">
+                                        <input type="password" name="Password" id="pswd" placeholder="Şifre" required="">
+                                        <input type="submit" value="Giriş Yap">
+                                    </form>
+
+                                    <script>
+                                        // Kaydedilmiş kullanıcı bilgileri
+                                        var users = [
+                                      
+                                            // Diğer kullanıcılar buraya eklenir
+                                        ];
+
+                                        function login() {
+                                            var username = document.getElementById("username").value;
+                                            var pswd = document.getElementById("pswd").value;
+
+                                            // Kayıtlı kullanıcıları kontrol et
+                                            for (var i = 0; i < users.length; i++) {
+                                                if (username === users[i].username && pswd === users[i].password) {
+
+                                                    // Giriş başarılı olduğunda sayfaya yönlendir
+                                                    alert("Giriş başarılı ana sayfaya yönlendiriliyorsunuz.");
+                                                    window.location.href = "/Home/Index";
+                                                    return false; // Formu gönderme (sayfaya yönlendirildiğinden formu göndermemize gerek yok)
+                                                }
+                                            }
+
+                                            // Kayıtlı kullanıcı yoksa veya hatalı girişse uyarı ver
+                                            alert("Hatalı kullanıcı adı veya şifre.");
+                                            return false; // Formu gönderme
+                                        }
+                                    </script>
+                                </div>
+
+                                <div class="form">
+                                    <h3>Hesap Oluştur</h3>
+                                    <form onsubmit="return registerUser()">
+                                        <input type="text" id="newUsername" placeholder="Kullanıcı Adı" required="">
+                                        <input type="password" id="newPassword" placeholder="Şifre" required="">
+                                        <input type="submit" value="Kayıt Ol">
+                                    </form>
+
+                                    <script>
+                                        // Kullanıcıları saklamak için bir dizi oluştur
+                                        var users = [];
+
+                                        function registerUser() {
+                                            var newUsername = document.getElementById("newUsername").value;
+                                            var newPassword = document.getElementById("newPassword").value;
+
+                                            // Yeni kullanıcıyı dizimize ekleyelim
+                                            users.push({ username: newUsername, password: newPassword });
+
+                                            // Başarıyla kaydedildiğini kullanıcıya bildir
+                                            alert("Kullanıcı başarıyla kaydedildi!");
+
+                                            // Formu temizle
+                                            document.getElementById("newUsername").value = "";
+                                            document.getElementById("newPassword").value = "";
+
+                                            // Formun varsayılan gönderimini engelle
+                                            return false;
+                                        }
+                                    </script>
+                                </div>
+                                <div class="cta"><a href="#">Şifreni mi unuttun?</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <script>
+        $('.toggle').click(function () {
+            // Switches the Icon
+            $(this).children('i').toggleClass('fa-pencil');
+            // Switches the forms
+            $('.form').animate({
+                height: "toggle",
+                'padding-top': 'toggle',
+                'padding-bottom': 'toggle',
+                opacity: "toggle"
+            }, "slow");
+        });
+    </script>
+    <!-- //bootstrap-pop-up -->
+    @RenderBody();
+    <!-- footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="w3ls_footer_grid">
+                <div class="col-md-6 w3ls_footer_grid_left">
+                    <div class="w3ls_footer_grid_left1">
+                        <h2>Bize Abone Olun</h2>
+                        <div class="w3ls_footer_grid_left1_pos">
+                            <form action="#" method="post">
+                                <input type="email" name="email" placeholder="Email" required="">
+                                <input type="submit" value="Gönder">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 w3ls_footer_grid_right">
+                    <a href="/Home/Index"><h2>One<span>Movies</span></h2></a>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+            <div class="col-md-5 w3ls_footer_grid1_left">
+                <p>UmutKuzeyGörgeç_22010903075 | One Movies | Tüm Hakları Saklıdır</p>
+            </div>
+            <div class="col-md-7 w3ls_footer_grid1_right">
+                <ul>
+                    <li>
+                        @Html.ActionLink("SSS", "FAQ", "Home")
+                    </li>
+                    <li>
+                        @Html.ActionLink("Korku", "Horror", "Genre")
+                    </li>
+                    <li>
+                        @Html.ActionLink("Aile", "Genres", "Genre")
+                    </li>
+                    <li>
+                        @Html.ActionLink("Komedi", "Comedy", "Genre")
+                    </li>
+                    <li>
+                        @Html.ActionLink("Bize Ulaşın", "Contact", "Home")
+                    </li>
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+    <!-- //footer -->
+    <!-- Bootstrap Core JavaScript -->
+    <script src="~/Film/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".dropdown").hover(
+                function () {
+                    $('.dropdown-menu', this).stop(true, true).slideDown("fast");
+                    $(this).toggleClass('open');
+                },
+                function () {
+                    $('.dropdown-menu', this).stop(true, true).slideUp("fast");
+                    $(this).toggleClass('open');
+                }
+            );
+        });
+    </script>
+    <!-- //Bootstrap Core JavaScript -->
+    <!-- here stars scrolling icon -->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            /*
+                var defaults = {
+                containerID: 'toTop', // fading element id
+                containerHoverID: 'toTopHover', // fading element hover id
+                scrollSpeed: 1200,
+                easingType: 'linear'
+                };
+            */
+
+            $().UItoTop({ easingType: 'easeOutQuart' });
+
+        });
+    </script>
+    <!-- //here ends scrolling icon -->
+</body>
+</html>
